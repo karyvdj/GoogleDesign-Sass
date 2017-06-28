@@ -1,0 +1,23 @@
+@mixin texto ($padd){
+  font-family: $fuente-principal;
+  color: $texto-gris;
+  padding: ($padd);
+}
+
+@mixin titulos (){
+  font-family: $fuente-principal;
+  font-size: $titulos-tamano;
+  color:$titulos-gris;
+}
+
+@mixin subtitulos (){
+  font-family: $fuente-principal;
+  font-size: $subtitulos-tamano;
+  color:$titulos-gris;
+}
+
+@mixin fechas (){
+  font-family: $fuente-fechas;
+  font-size: $texto-tamano;
+  color:$fecha-grisclaro;
+}

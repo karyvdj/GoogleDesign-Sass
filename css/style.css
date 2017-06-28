@@ -9,7 +9,7 @@
   margin: 0px auto; }
 
 .row:before, .rowafter {
-  content: " ";
+  content: "";
   display: table; }
 .rowafter {
   clear: both; }
@@ -54,5 +54,91 @@
 
 .col-12 {
   width: 100%; }
+
+[class*="offset-"] {
+  min-height: 7px;
+  padding: 12px;
+  float: left; }
+
+.offset-1 {
+  margin-left: 8.33333%; }
+
+.offset-2 {
+  margin-left: 16.66667%; }
+
+.offset-3 {
+  margin-left: 25%; }
+
+.offset-4 {
+  margin-left: 33.33333%; }
+
+.offset-5 {
+  margin-left: 41.66667%; }
+
+.offset-6 {
+  margin-left: 50%; }
+
+.offset-7 {
+  margin-left: 58.33333%; }
+
+.offset-8 {
+  margin-left: 66.66667%; }
+
+.offset-9 {
+  margin-left: 75%; }
+
+.offset-10 {
+  margin-left: 83.33333%; }
+
+.offset-11 {
+  margin-left: 91.66667%; }
+
+.offset-12 {
+  margin-left: 100%; }
+
+.logo {
+  margin-top: 5%;
+  text-align: center; }
+  .logo .logo-nav {
+    width: 85%; }
+
+.menu {
+  text-align: center; }
+
+ul li {
+  text-decoration: none;
+  display: inline-flex;
+  font-family: "Roboto", sans-serif;
+  color: #414549;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 5%; }
+  ul li:hover {
+    font-family: "Roboto", sans-serif;
+    color: #414549;
+    padding: 20px;
+    border-bottom: 4px solid #dbdcdd;
+    color: #5f6368; }
+  ul li a {
+    color: #414549;
+    text-decoration: none; }
+
+.episodio1 h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: #424242; }
+.episodio1 h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #424242; }
+.episodio1 .texto-corrido {
+  font-family: "Roboto", sans-serif;
+  color: #414549;
+  padding: 13px; }
+.episodio1 .fecha {
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  color: #5f6368; }
 
 /*# sourceMappingURL=style.css.map */
