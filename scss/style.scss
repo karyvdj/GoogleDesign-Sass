@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixin";
+@import "funciones";
 
 *{
   box-sizing: border-box;
@@ -9,14 +10,14 @@
 .container{
   width: 100%;
   max-width: 1200px;
-  margin:0px auto;
+  margin:0 auto;
 }
 .row{
   &:before{
     content: "";
     display: table;
   }
-  &after{
+  &:after{
     @extend .row:before;
     clear: both;
   }
@@ -27,31 +28,13 @@
   float: left;
 }
 
-@function anchoColumnas($columnas) {
-  @return percentage(($columnas/12));
-}
-
-@for $numColumna from 1 through 12{
-  .col-#{$numColumna}{
-    width: anchoColumnas($numColumna);
-  }
-}
-
 [class*="offset-"]{
   min-height: 7px;
   padding: 12px;
   float: left;
 }
-@function offset($columnsOffset){
-  @return percentage(($columnsOffset/12));
-}
-@for $columnaOff from 1 through 12 {
-  .offset-#{$columnaOff} {
-    margin-left: anchoColumnas($columnaOff);
-  }
-}
 
-.logo{
+.header{
   margin-top: 5%;
   text-align: center;
   .logo-nav{
@@ -60,39 +43,77 @@
 }
 .menu{
   text-align: center;
-}
-
-ul{
   li{
-    text-decoration: none;
-    display: inline-flex;
+    @include li;
     @include texto (20px);
+    display: inline-flex;
     font-weight: 500;
-    font-size:$texto-tamano;
     margin-bottom: 5%;
     &:hover{
       @include texto (20px);
       border-bottom: 4px solid $hover-gris;
       color: $fecha-grisclaro;
     }
-    a{
-      color: $texto-gris;
-      text-decoration: none;
-    }
+      a{
+        color: $texto-gris;
+        text-decoration: none;
+      }
+  }
+}
+.titulo{
+  @include titulos();
+  font-size: $titulos-tamano;
+}
+.subtitulo{
+  @extend .titulo;
+  padding-top: 25px;
+  font-size: $subtitulos-tamano;
+}
+.subtitulo2{
+  @extend .titulo;
+  padding-bottom: 10px;
+  font-size: $subtitulos2-tamano;
+}
+.texto-corrido{
+  @include texto(0 0 5% 0);
+}
+.fecha{
+  @include fechas(0 0 1% 0);
+}
+
+
+.link{
+  font-family: $fuente-principal;
+  text-decoration: none;
+  color: $elemento-azul;
+  font-size: $subtitulos2-tamano;
+  text-align: right;
+}
+.separador{
+  border: 2px solid $elemento-azul;
+  margin: 6% 0 4% 0;
+}
+
+.tam-img{
+  width: 100%;
+}
+
+#newsfeeed{
+  .singUp .link{
+    font-size: $texto-tamano;
+  }
+  .singUp{
+    background: rgb(233, 233, 233);
+    border-radius: 5px;
   }
 }
 
-.episodio1{
-  h3{
-    @include titulos();
-  }
-  h6{
-    @include subtitulos();
-  }
-  .texto-corrido{
-    @include texto(13px);
-  }
-  .fecha{
-    @include fechas();
+.tam-img-half{
+  width:50%;
+}
+
+#newsfeeed-img{
+  .separador{
+    margin: 0;
   }
 }
