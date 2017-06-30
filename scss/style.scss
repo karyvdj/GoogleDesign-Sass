@@ -51,7 +51,6 @@
     @include texto (20px);
     display: inline-flex;
     font-weight: 500;
-    margin-bottom: 5%;
     &:hover{
       @include texto (20px);
       border-bottom: 4px solid $hover-gris;
