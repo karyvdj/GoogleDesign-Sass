@@ -16,3 +16,9 @@
     margin-left: anchoColumnas($columnaOff);
   }
 }
+
+@for $contenedores from 1 through 7 {
+  #{'.separador-azul'} {
+    border-top: 4px solid $elemento-azul;
+  }
+}

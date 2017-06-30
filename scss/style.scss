@@ -11,6 +11,8 @@
   width: 100%;
   max-width: 1200px;
   margin:0 auto;
+  margin-top: 5%;
+  padding: 2%;
 }
 .row{
   &:before{
@@ -41,6 +43,7 @@
     width: 85%;
   }
 }
+
 .menu{
   text-align: center;
   li{
@@ -54,12 +57,9 @@
       border-bottom: 4px solid $hover-gris;
       color: $fecha-grisclaro;
     }
-      a{
-        color: $texto-gris;
-        text-decoration: none;
-      }
   }
 }
+
 .titulo{
   @include titulos();
   font-size: $titulos-tamano;
@@ -71,10 +71,10 @@
 }
 .subtitulo2{
   @extend .titulo;
-  padding-bottom: 10px;
+  padding: 2% 0;
   font-size: $subtitulos2-tamano;
 }
-.texto-corrido{
+.parrafo{
   @include texto(0 0 5% 0);
 }
 .fecha{
@@ -89,13 +89,20 @@
   font-size: $subtitulos2-tamano;
   text-align: right;
 }
-.separador{
-  border: 2px solid $elemento-azul;
-  margin: 6% 0 4% 0;
-}
 
 .tam-img{
   width: 100%;
+}
+
+.tam-img-mitad{
+  width:50%;
+}
+
+#episodio1{
+  &:hover {
+     box-shadow: 0 0 10px $fecha-grisclaro;
+     cursor: pointer;
+   }
 }
 
 #newsfeeed{
@@ -108,12 +115,21 @@
   }
 }
 
-.tam-img-half{
-  width:50%;
-}
-
 #newsfeeed-img{
   .separador{
     margin: 0;
+  }
+}
+
+#connect{
+  li{
+    @include li;
+  }
+  .parrafo{
+    font-size: 12px;
+    margin-top: 5%;
+  }
+  .col-4{
+    padding: 0;
   }
 }
